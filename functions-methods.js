@@ -9,6 +9,15 @@
 // getEmailDomain("t.mellink@novi.nl") geeft novi.nl
 // getEmailDomain("a.wiersma@outlook.com") geeft outlook.com
 
+let email = "";
+function getEmailDomain(email) {
+const domainName = email.split("@");
+  return domainName[1];
+}
+
+console.log(getEmailDomain(email + "n.eeken@novi-education.nl"));
+console.log(getEmailDomain(email + "t.mellink@novi.nl"));
+console.log(getEmailDomain(email + "a.wiersma@outlook.com"));
 
 
 
@@ -19,6 +28,35 @@
 // typeOfEmail("t.mellink@novi.nl") geeft geeft "Medewerker"
 // typeOfEmail("novi.nlaapjesk@outlook.com") geeft geeft "Extern" <-- deze moet het ook doen!
 // typeOfEmail("a.wiersma@outlook.com") geeft "Extern"
+
+//input
+//input emailadres
+
+//output
+//domeinnaam
+
+//stappenplan
+//stap 1 een variable maken om het email adres in op te slaan
+//stap 2 functie maken die het type email controleert
+//stap 3 variabele maken om het type email op te slaan
+//stap 4 returnen
+//stap 5 if statement maken op de return  met conditie === gelijk aan het genoemde domein met de gewenste tekst
+//stap 6 else if statement maken als bovengenoemde conditie false is moet dan gelijk zijn aan het genoemde domein en dan de gewenste tekst
+//stap 7 statement loggen
+
+
+let emailTwo = "";
+function typeOfEmail(email) {
+  const domainNameTwo = emailTwo.split("@");
+  //if (domainNameTwo[1] === "novi-education.nl") {
+    //'Student'
+  //} else if (domainNameTwo[1] === "novi.nl") {
+    //'Medewerker'
+  //}
+
+console.log(domainNameTwo[1]);
+
+
 
 
 
