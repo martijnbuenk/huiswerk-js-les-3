@@ -59,16 +59,23 @@ console.log(typeOfEmail("a.wiersma@outlook.com"))
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
 
 function checkEmailValidity(email) {
-  const emailValidity = email.slice(-1);
-  if (emailValidity === ".") {
-    return false
+  if (email.endsWith(".")) {
+    return false;
   }
- return emailValidity;
-  else if (emailValidity === "@") {
-    return true
+  if (email.includes(",")) {
+    return false;
   }
-  return emailValidity
-
+    if (email.includes("@")) {
+    return true;
+  }
+  if (!email.includes("@")) {
+    return false;
+  }
 }
 
 console.log(checkEmailValidity("n.eeken@novi.nl"))
+console.log(checkEmailValidity("tessmellink@novi.nl"))
+console.log(checkEmailValidity("n.eekenanovi.nl"))
+console.log(checkEmailValidity("n.eeken@novinl."))
+console.log(checkEmailValidity("tessmellink@novi,nl"))
+
